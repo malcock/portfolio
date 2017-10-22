@@ -1,0 +1,64 @@
+.workhistory {
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+$job-triangle: 10px;
+
+.job {
+    list-style: none;
+    border-left: 5px solid $grey-darker;
+    color: $grey-darkest;
+    position: relative;
+    padding: 0 0 40px 1.25rem;
+    margin: 0 1.25rem 0.75rem 1.25rem;
+
+    &-dates {
+        font-family: 'Lato';
+        font-weight: 200;
+    }
+    
+    &-start {
+        display: block;
+        position: absolute;
+        bottom: 5px;
+    }
+    &-to { display: none; }
+    &-end {
+        display: block;
+        position: relative;
+    }
+    &-name {
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    &-role {
+        font-weight: bold;
+    }
+
+    &:before, &:after {
+        content: '';
+        width:0;
+        height: 0;
+        position: absolute;
+        top:0;
+        left: -$job-triangle;
+
+        border-style: solid;
+        border-width: $job-triangle $job-triangle 0 0;
+        border-color: $bg transparent transparent transparent;
+    }
+    &:after {
+        top:auto;
+        bottom:0;
+
+        border-width: 0 0 $job-triangle $job-triangle;
+        border-color: transparent transparent $bg transparent;
+    }
+
+    &_short {
+        padding-bottom: 5px;
+    }
+}

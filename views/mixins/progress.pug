@@ -1,0 +1,8 @@
+mixin progress(label, image, value, text, clss)
+    .tool.grid-x.grid-padding-x.align-middle
+        .cell.small-2
+            img(src=image alt=label class="tool-image")
+        .cell.small-10
+            div(class=clss + " progress" role=" progressbar" tabindex="0" aria-valuenow=value aria-valuemin="0" aria-valuetext=value +" percent" aria-valuemax="100")
+                .progress-meter(style="width:"+value + "%")
+                    .progress-meter-text= text

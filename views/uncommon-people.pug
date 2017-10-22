@@ -1,0 +1,34 @@
+extends layout.pug
+
+include mixins/big-num.pug
+include mixins/subtitle.pug
+include mixins/progress.pug
+include mixins/job.pug
+include mixins/tool.pug
+
+block title
+    | Uncommon People - Martin Alcock - UX / Front End Development / Creative Type
+
+block content
+    .grid-x.grid-padding-y.align-center
+        .cell.small-12
+            h2.text-center Uncommon People
+            img.image(src="/images/uncommon-people-1.png", alt="Uncommon People")
+    .grid-x.grid-x-padding.align-center
+        .cell.small-11.medium-10.large-8
+            p 
+                | #[a(href="http://www.uncommonpeople.co.uk" target="_blank") Uncommon People] is a database driven site built for #[a(href="http://www.sensoria.org.uk" target="_blank") Sensoria Festival] which allows you to explore the connections between the different bands that have come out of Sheffield.
+                | Did you know that The Human League are connected to Arctic Monkeys through only one other band? Or the briefly lived Richard Hawley project Teenage Werewolf boasted
+                | members from Pulp, The Longpigs and I Monster? Uncommon People allows you to move around these connections fluidly through a constantly moving organic structure. 
+            img.image(src="/images/uncommon-people-2.png", alt="Uncommon People")      
+            p
+                | The website runs from a MySQL relational database of bands, people and the roles they played in those bands, then generates an XML document that's read in by
+                | a Flash movie built with Away3d. I designed and built everything from the logo and interaction patterns to the database and admin system.
+            p   
+                | Sadly it's suffering a bit these days from being a bit unloved in terms of technology and a bit too loved from
+                | it's owners adding more bands than was originally planned for.
+    .grid-x.align-center
+        .cell.small-12
+            img.image(src="/images/uncommon-people-3.png", alt="Uncommon People")  
+            p.text-center
+                a.button(href="index") Go back

@@ -1,0 +1,172 @@
+extends layout.pug
+
+include mixins/big-num.pug
+include mixins/subtitle.pug
+include mixins/progress.pug
+include mixins/job.pug
+include mixins/tool.pug
+include mixins/beardy.pug
+
+block title
+    | Martin Alcock - UX / Front End Development / Creative Type
+
+block content
+    .grid-x.grid-padding-x.row-odd
+        .cell.large-6.medium-8
+            +subtitle("I'm experienced")
+            p
+                | I have  #[strong nearly a decade] of professional experience in an agency, freelance and in-house setting.
+                | In that time, I have worked independently, as part of a team, as team lead and with external contractors.
+            ol.workhistory
+                li
+                    h3 Work History
+                li
+                    +job("job_short", "Patient.info","Lead Front End Web Developer & UX/UI design","","Now")
+                        p 
+                            | While I've been at Patient I've worked on practicially every part of the business and have a deep understanding 
+                            | of the requirements and detail of working on a massive scale website, hosting well over 10,000 uniquely authored pages.
+                        p
+                            | In my time at Patient I've played my role in a team that has seen traffic rise from 3.5m unique users per month to over 20m.
+                            | Managed mailing lists of over 600k users and social media accounts with over 1m followers.
+                li
+                    +job("","10th Planet","Creative Web Developer","2008","2011")
+                        p
+                            | At 10th Planet I cut my teeth as a full stack designer and developer 
+                            | working from initial concepts all the way through to database driven php applications and custom Wordpress sites.
+                li
+                    +job("","2:1 BA Graphic Art & Design","Leeds Metropolitan University","2004","2007", "")
+                
+        .cell.large-6.medium-4.text-center
+            +beardy("images/beardy/experience", "Experience")
+    .grid-x.grid-padding-x.row-even
+        .cell.medium-8.large-6
+            +subtitle("I follow best practice")
+            p
+                | I'm interested in researching and following best practice to achieve UX and design goals. #[a(href="https://www.circulardesignguide.com/" target="_blank") Circular Design] is a methodology
+                | that can be applied the full gamut of design and business. 
+            p
+                | It's a way of looking at problems and systems to find iterative solutions that work all the way through the product life cycle.
+                | It can be applied to every step of the UX journey, from identifying user personas, discovering their wants and needs, to developing early prototypes and finally progressive enhancements based on real world data.
+            p
+
+        .cell.medium-4.large-6.text-center
+            +beardy("images/beardy/best-practice", "I follow best practice")
+    .grid-x.grid-padding-x.row-odd
+        .cell.medium-8.large-6
+            +subtitle("I ❤ numbers")
+            p
+                | Working up a sensible response to any design or UX problem starts with a simple question that can be tricky to answer - who is this for?
+            p
+                | To answer this kind of question takes gathering and digging through as much data you can possibly get your hands on and then making the correct interpretation based off that.
+            p
+                | What's their demographic? What are their motivations? What are they trying to achieve when they come to a site?
+                | What are their pains? Once you have these answers, you can start thinking about how you can influence them, convert visitors into users or customers.
+                | 
+            p
+                | Having worked on a site with millions of monthly users I have a deep understanding of how to set up and interrogate massive datasets using Google Analytics.
+                | 
+        .cell.medium-4.large-6.text-center
+            +beardy("images/beardy/numbers", "I live numbers")
+    .grid-x.grid-padding-x.row-even
+        .cell.medium-8.large-6
+            +subtitle("I know my tools")
+            p
+                | I've worked across multiple different disciplines and mediums, from print to web, from video to VR, from mobile to social media
+                | picking up a huge bank of skills and knowledge along the way. A base knowledge of development best practices along with a design
+                | education means that I can communicate effectively with people all along the development process while having a good understanding of realistic timescales.
+            h4.tool-title Design and UX
+            .grid-x.align-middle
+                +tool("images/logos/photoshop-cc.svg", "Photoshop")
+                +tool("images/logos/illustrator-cc.svg", "Illustrator")
+                +tool("images/logos/indesign-cc.svg", "Indesign")
+                +tool("images/logos/adobe-xd.svg", "Adobe XD")
+                +tool("images/logos/sketch-2.svg", "Sketch")
+            h4.tool-title Front End Technologies
+            .grid-x.align-middle
+                +tool("images/logos/html5.svg", "HTML5")
+                +tool("images/logos/css3.svg", "CSS3")
+                +tool("images/logos/jquery-2.svg", "jQuery")
+                +tool("images/logos/javascript.svg", "Pure Javascript")
+                +tool("images/logos/bootstrap-4.svg", "Bootstrap")
+                +tool("images/logos/foundation.svg", "Foundation")
+            h4.tool-title Development tools
+            .grid-x.align-middle
+                +tool("images/logos/nodejs.svg", "Node.js")
+                +tool("images/logos/express.svg", "Express")
+                +tool("images/logos/gulp.svg", "Gulp")
+                +tool("images/logos/pug.svg", "Pug")
+                +tool("images/logos/sass.svg", "Sass")
+            h4.tool-title Video and animation production
+            .grid-x.align-middle
+                +tool("images/logos/premiere-cc.svg", "Premiere")
+                +tool("images/logos/after-effects-cc.svg", "After Effects")
+                +tool("images/logos/encore.svg", "Encore")
+            h4.tool-title Mobile and VR
+            .grid-x.align-middle
+                +tool("images/logos/csharp.svg", "C#")
+                +tool("images/logos/unity.svg", "Unity")
+                
+        .cell.medium-4.large-6.text-center
+            +beardy("images/beardy/tools", "I know my tools")
+
+    .grid-x.grid-padding-x.row-odd
+        .cell.medium-8.large-6
+            +subtitle("I'm experimental")
+            p
+                | I've always been keen on exploring new ways of user interaction. Whether it's a different way of interacting with a database driven website
+                | or trying out brand new ways of experiencing the digital world.
+            +job("job_short","New Template", "Lead Programmer","","July 2016") 
+                p #[a(href="http://epiphanyvr.co.uk/work/item/new-template/" target="_blank") New template] is a play set entirely in VR, placing the user in the position of a technician reviewing the moment an AI gained conciousness.
+            +job("job_short","Uncommon People","Design and Programmer","","March 2009")
+                p 
+                    | #[a(href='/uncommon-people') Uncommon people] was a way to explore the bands from Sheffield and
+                    | the connections between them through the people that formed them. Sadly programmed in Flash and now a bit defunct.
+            p
+                | I'm also currently in talks with Sheffield Children's Hospital to produce an AR installation for use in their treatment rooms, giving their patients a unique, welcome and engaging
+                | distraction from their treatment. The idea is to create a 'magic bed' that lets them go on a themed adventure through an iPad where the decorated rooms come to life around them.
+            p
+                | Another possible upcoming project is working with WordLife - the Sheffield based poetry and performance collective to produce an AR app to be used alongside a book.
+        .cell.medium-4.large-6.text-center
+            +beardy("images/beardy/experimental", "I'm experimental")
+    .grid-x.grid-padding-x.row-even
+
+        .cell.medium-8.large-6
+            +subtitle("I work cross media")
+            p
+                | I've produced just about every form of media possible during my career from print to video.
+                | I've run live video chat events on Facebook, produced podcasts and videos - sometimes even doing the voiceovers (and cringing myself halfway to death during the edit phase). I've built unique websites and mobile apps from scratch while also producing gig posters.
+            +job("job_short","Solar","UX & Programming", "", "March 2017")
+                p 
+                    | Available online from the #[a(href="https://itunes.apple.com/gb/app/solar-walk-sheffield/id1210937903?mt=8") App Store] and #[a(href="https://play.google.com/store/apps/details?id=uk.co.epiphanyvr.solar&hl=en_GB") Google Play], Solar is a art geocaching app which
+                    | takes you on a walk out of Sheffield city centre to discover artwork made by the lecturers of Sheffield Hallam University. Funded by Sheffield Hallam's Catalyst Fund and produced in association with the Walking Arts Research Group, Epiphany VR and Opus Independents,
+                    | users walk a scaled down version of the solar system from the peace gardens all the way out to Grindleford.  
+        .cell.medium-4.large-6.text-center
+            +beardy("images/beardy/cross-media", "I work cross media")
+
+    .grid-x.grid-padding-x.row-odd
+        .cell.medium-8.large-6
+            +subtitle("I love it")
+            p
+                | I really do love design - it's something that I don't stop when I get home. I've been involved with helping produce posters for community charity fundraisers and this year I'm helping out with Oxjam Sheffield doing their design work for them.
+            
+            .grid-x.grid-padding-x.grid-padding-y
+                .cell.auto
+                    a.imgzoom(href="/images/sharrow-2016.jpg" title="Sharrow Festival 2016")
+                        img.imgzoom-img(src="/images/sharrow-2016-tn.jpg" alt="Sharrow Festival 2016" )
+                .cell.auto
+                    a.imgzoom(href="/images/folk-fest-2016.jpg" title="Sharrow Folk Festival 2016")
+                        img.imgzoom-img(src="/images/folk-fest-2016-tn.jpg" alt="Sharrow Folk Festival 2016" )
+                .cell.auto
+                    a.imgzoom(href="/images/sharrow-fringe.jpg" title="Sharrow Fringe Festival 2015")
+                        img.imgzoom-img(src="/images/sharrow-fringe-tn.jpg" alt="Sharrow Fringe Festival 2016" )
+                .cell.auto
+                    a.imgzoom(href="/images/folk-fest-2015.png" title="Sharrow Folk Festival 2015")
+                        img.imgzoom-img(src="/images/folk-fest-2015-tn.png" alt="Sharrow Folk Festival 2015" )
+                .cell.auto
+                    a.imgzoom(href="/images/vicfest.jpg" title="Vicfest")
+                        img.imgzoom-img(src="/images/vicfest-tn.jpg" alt="Vicfest" )
+            
+            p
+                | I've even started designing and building my own furniture in my spare time and so far none of it has collapsed!
+        .cell.medium-4.large-6.text-center
+            +beardy("images/beardy/love-it", "I love it")

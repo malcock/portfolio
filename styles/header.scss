@@ -1,0 +1,15 @@
+.header {
+    padding:20px;
+
+    &-title {
+        font-size: 4rem;
+        text-align: center;
+
+        &_thin {
+            font-weight: 300;
+            font-size: 2rem;
+            display: block;
+        }
+    }
+
+}

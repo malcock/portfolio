@@ -1,0 +1,99 @@
+@import 'settings.scss';
+@import './node_modules/foundation-sites/scss/foundation.scss';
+@include foundation-everything;
+
+$grey-lightest: #F5F7F9;
+$grey-lighter:  #D8E0E7;
+$grey-mid:      #B3C1CF;
+$grey-darker:   #364757;
+$grey-darkest:  #171E26;
+
+$col-red: #FF0500;
+$col-orange: #FF8E00;
+$col-yellow: #FDCC00;
+$col-green: #00BD00;
+$col-blue: #0574FE;
+
+$bg: $grey-lightest;
+$col: $grey-darkest;
+
+$triangle-size: 20px;
+
+body {
+    background: $bg;
+    padding:0;
+
+    h1 {
+        color:$col;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+.image {
+    border: $grey-darker 5px solid;
+    border-left: none;
+    border-right: none;
+    margin: 1.25em 0;
+}
+
+.row {
+    &-even {
+        padding: 20px 0;
+        flex-direction: row-reverse;
+        @include breakpoint(small only){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-odd {
+        padding: 20px 0;
+        @include breakpoint(small only){
+            flex-direction: column-reverse;
+        }
+    }
+
+    
+}
+
+.modal {
+    background:rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    display: none;
+
+    .cell {
+       padding:20px;
+       height:100%;
+    }
+    &-img {
+        width:auto;
+        height:100%;
+        max-height: 900px;
+    }
+
+    &_on {
+        display: block;
+    }
+}
+
+.supporting-image {
+    width:100%;
+    max-width: 600px;
+    @include breakpoint(small only){
+        width:80%;
+
+        position: relative;
+        margin: 0 auto 20px;
+    }
+}
+
+@import "header";
+@import "job";
+@import "bignum";
+@import "tool";
+
+@import "overrides/progress";
+

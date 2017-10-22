@@ -1,0 +1,10 @@
+mixin job(customClass,place,role,start,end)
+    div(class="job " + customClass)
+        h3.job-dates
+            span.job-start= start
+            span.job-to -
+            span.job-end= end
+            span.job-name= place
+        p.job-role= role
+            if block
+                block

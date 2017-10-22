@@ -1,0 +1,32 @@
+include mixins/input-text.pug
+
+doctype html
+html
+  head
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name="robots" content="nofollow, noindex")
+    meta(charset="UTF-8")
+    title
+        block title
+    link(rel='stylesheet' href='/css/main.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:300,400|Lato:300,400')
+    script.
+        var charts = [];
+
+  body
+    header.header
+        h1.header-title #[a(href="/") Martin Alcock] #[span.header-title_thin UX / Front End Development / Creative Type]
+    main.grid-container
+        block content
+    #modal.modal.grid-x.align-middle.align-center
+        .cell.small-11.text-center
+            img#modalImg.modal-img(src="/images/sharrow-fringe.jpg" alt="#")
+
+    footer.grid-container.footer
+        p 2017 Martin Alcock is cool
+    script(src="/js/lib/jquery.min.js")
+    script(src="/js/lib/chart.min.js")
+    script(src="/js/lib/chartjs-plugin-deferred.min.js")
+    script(src="/js/main.js")
+    
+    
