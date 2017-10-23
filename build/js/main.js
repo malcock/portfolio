@@ -1,13 +1,13 @@
 (function($){
-    Chart.Deferred.yOffset=300;
+    //Chart.Deferred.yOffset=300;
     //lets go! document.ready
     $(function(){
         
-        for(var c=0;c<charts.length;c++){
-            var chart = charts[c];
-            new Chart(document.getElementById(chart.id), chart.data);
+        // for(var c=0;c<charts.length;c++){
+        //     var chart = charts[c];
+        //     new Chart(document.getElementById(chart.id), chart.data);
             
-        }
+        // }
 
         $(".imgzoom").on("click",function(e){
             e.preventDefault();
@@ -20,6 +20,8 @@
         $("#modal").on("click",function(e){
             $(this).removeClass("modal_on");
         })
+
+        $(document).foundation();
 
     });
 

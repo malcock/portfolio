@@ -36,6 +36,7 @@ gulp.task('build',function(){
     //js
     gulp.src('public/js/**/*.js')
     .pipe(gulp.dest('build/js'));
+
     //styles
     gulp.src('styles/main.scss')
     .pipe(plumber({ errorHandler: onError }))
@@ -43,13 +44,17 @@ gulp.task('build',function(){
     .pipe(cleanCSS())
     .pipe(gulp.dest('build/css'));
 
-    //images
+    //images - run imagemin before copying
     gulp.src('public/images/**/*')
     .pipe(cache(imagemin({
       optimizationLevel: 3,
       progressive: true,
       interlaced: true})))
     .pipe(gulp.dest('build/images/'));
+
+    //files copy files dir directly
+    gulp.src('public/files')
+    .pipe(gulp.dest('build/files'));
 
 });
 

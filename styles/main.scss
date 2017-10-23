@@ -90,6 +90,12 @@ body {
     }
 }
 
+.title {
+    @include breakpoint(small only){
+        font-size: 36px;
+    }
+}
+
 @import "header";
 @import "job";
 @import "bignum";

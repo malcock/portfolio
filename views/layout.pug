@@ -1,8 +1,17 @@
 include mixins/input-text.pug
+include mixins/subtitle.pug
 
 doctype html
 html
   head
+    script(src="https://www.googletagmanager.com/gtag/js?id=UA-7634062-3")
+    script
+        | window.dataLayer = window.dataLayer || [];
+        | function gtag(){dataLayer.push(arguments);}
+        | gtag('js', new Date());
+        | gtag('config', 'UA-7634062-3');
+
+
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name="robots" content="nofollow, noindex")
     meta(charset="UTF-8")
@@ -23,6 +32,12 @@ html
             img#modalImg.modal-img(src="/images/sharrow-fringe.jpg" alt="#")
 
     footer.grid-container.footer
+        +subtitle("Contact me")
+        p
+            | Interested in knowing more? Get in touch :)
+        h3 ☎ 0780 941 2211
+        h3 @ #[a(href="mailto:hello@martinalcock.co.uk") hello@martinalcock.co.uk]
+        
         p 2017 Martin Alcock is cool
     script(src="/js/lib/jquery.min.js")
     script(src="/js/lib/foundation.min.js")
