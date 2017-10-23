@@ -84,6 +84,9 @@ gulp.task('postinstall', function(){
     gulp.src('./node_modules/chart.js/dist/chart.min.js')
     .pipe(gulp.dest('public/js/lib'));
 
+    gulp.src('./node_modules/foundation-sites/dist/js/foundation.min.js')
+    .pipe(gulp.dest('public/js/lib'));
+
     gulp.src('./node_modules/chartjs-plugin-deferred/dist/chartjs-plugin-deferred.min.js')
     .pipe(gulp.dest('public/js/lib'));
 
