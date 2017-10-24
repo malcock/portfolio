@@ -96,10 +96,15 @@ body {
     }
 }
 
+.vid {
+    width:100%;
+    height:auto;
+}
+.footer {
+    padding-bottom:200px;
+}
+
 @import "header";
 @import "job";
 @import "bignum";
 @import "tool";
-
-@import "overrides/progress";
-

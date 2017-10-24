@@ -15,7 +15,7 @@ var beeper      = require('beeper');
 var ftp         = require( 'vinyl-ftp' );
 
 var fs = require('fs');
-var ftp_auth = JSON.parse(fs.readFileSync('./config.json'));
+var ftp_auth = JSON.parse(fs.readFileSync('config.json'));
 
 var onError            = function(err) { // Custom error msg with beep sound and text color
     notify.onError({
@@ -53,7 +53,7 @@ gulp.task('build',function(){
     .pipe(gulp.dest('build/images/'));
 
     //files copy files dir directly
-    gulp.src('public/files')
+    gulp.src('public/files/*')
     .pipe(gulp.dest('build/files'));
 
 });
