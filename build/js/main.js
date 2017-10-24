@@ -8,7 +8,10 @@
         //     new Chart(document.getElementById(chart.id), chart.data);
             
         // }
-
+        $(document).on("click","a",function(){
+            var $this = $(this);
+            ga('send', 'event', 'link', $this.text(), 'click');
+        })
         $(".imgzoom").on("click",function(e){
             e.preventDefault();
             var $this = $(this);
